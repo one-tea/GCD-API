@@ -28,22 +28,22 @@
  6.同步函数+主队列:  死锁
 
  
- ####应用场景1：等待现在执行中处理结束，多任务则按顺序进行-> serialQueue (cmd+click)
+ #### 应用场景1：等待现在执行中处理结束，多任务则按顺序进行-> serialQueue (cmd+click)
  
- ####应用场景2：不等待现在执行中处理结束，多任务则并发进行，适用于耗时操作，没有前后逻辑顺序或依赖，可用返回顺序按本身耗时时间决定 -> concurrentQueue
+ #### 应用场景2：不等待现在执行中处理结束，多任务则并发进行，适用于耗时操作，没有前后逻辑顺序或依赖，可用返回顺序按本身耗时时间决定 -> concurrentQueue
  
- ####应用场景3：不论任何函数生成的队列，如果想指定 A队列 与 B队列 拥有相同优先级 -> dispatch_set_target_queue
+ #### 应用场景3：不论任何函数生成的队列，如果想指定 A队列 与 B队列 拥有相同优先级 -> dispatch_set_target_queue
    (知识点：优先级 -> 并不是线程按等级顺序来执行完结束，而是系统处理器优先分配处理，并不代表该线程最先处理完（只是会哭的孩子有奶吃长得快！）
  
-  ####应用场景4：在追加多个处理全部结束后想执行结束处理 -> dispatch_group
+  #### 应用场景4：在追加多个处理全部结束后想执行结束处理 -> dispatch_group
  
- ####应用场景5：访问数据库或文件时，为避免数据竞争 -> dispatch_barrier_async
+ #### 应用场景5：访问数据库或文件时，为避免数据竞争 -> dispatch_barrier_async
 
  #### 应用场景6：将Block指定次数的添加到Dispatch queue中 -> dispatch_apply
  
  #### 应用场景7：在大量处理追加到queue中，对已添加过未执行的处理进行管理（挂起/唤醒） -> dispatch_suspend__dispatch_resume
 
- ####应用场景8：在并行处理更新数据，会产生数据不一的情况，虽然串行和栅栏函数(dispatch_barrier_async)也可以解决，更细量化处理到任务中一个方法调用 -> dispatchSemaphore
+ #### 应用场景8：在并行处理更新数据，会产生数据不一的情况，虽然串行和栅栏函数(dispatch_barrier_async)也可以解决，更细量化处理到任务中一个方法调用 -> dispatchSemaphore
 
 
  ##
@@ -53,8 +53,3 @@
  http://www.raywenderlich.com/63338/grand-central-dispatch-in-depth-part-2
  iOS - 多线程你看全不全：https://juejin.im/entry/57dcc1cc0bd1d00057e97dc7
  IOS多线程之GCD的执行原理：http://www.jianshu.com/p/5840523fb3ea
-
-作者：_方丈
-链接：https://www.jianshu.com/p/4e75bc34ef07
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
