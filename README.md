@@ -53,6 +53,5 @@
  http://www.raywenderlich.com/63338/grand-central-dispatch-in-depth-part-2   
  iOS - 多线程你看全不全：https://juejin.im/entry/57dcc1cc0bd1d00057e97dc7  
  IOS多线程之GCD的执行原理：http://www.jianshu.com/p/5840523fb3ea  
- 
- 作者：_方丈    
- 链接：https://www.jianshu.com/p/4e75bc34ef07
+   
+ 博客链接：https://www.jianshu.com/p/4e75bc34ef07
